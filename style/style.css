@@ -1,0 +1,334 @@
+/* Estilo geral romântico, moderno e elegante */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6f0 0%, #ccf2ff 100%);
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* Adicione ao seu style.css */
+.intro-overlay {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: linear-gradient(135deg, #ffe6f0 0%, #ccf2ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s;
+}
+
+.intro-overlay h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #e91e6320;
+}
+
+.intro-overlay button {
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #e91e63 60%, #ffb6c1 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px #e91e6340;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.intro-overlay button:hover {
+  background: linear-gradient(90deg, #ad1457 60%, #ffb6c1 100%);
+  transform: scale(1.07);
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: rgba(255, 192, 203, 0.18);
+  border-bottom: 2px dashed #e91e63;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #e91e6320;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ad1457;
+  margin-top: 0;
+}
+
+.game {
+  text-align: center;
+  margin: 2.5rem auto 1.5rem auto;
+  position: relative;
+  min-height: 120px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #e91e6320;
+  max-width: 420px;
+  padding: 2.5rem 1.2rem;
+  transition: box-shadow 0.3s;
+}
+
+.game p {
+  font-size: 1.4rem;
+  color: #e91e63;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.game button {
+  padding: 0.8rem 2.4rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #e91e63 60%, #ffb6c1 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin: 0 1.2rem;
+  box-shadow: 0 2px 12px #e91e6340;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.game button:hover {
+  background: linear-gradient(90deg, #ad1457 60%, #ffb6c1 100%);
+  transform: scale(1.09);
+  box-shadow: 0 4px 24px #e91e6340;
+}
+
+#noBtn {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transition: all 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.poem, .verse {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.95);
+  padding: 2.2rem 1.7rem;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #e91e6320;
+  font-size: 1.18rem;
+  color: #ad1457;
+  line-height: 1.75;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.poem h2, .verse h3 {
+  color: #e91e63;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.gallery {
+  background: rgba(255,255,255,0.85);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #e91e6320;
+  padding: 2.2rem 1.2rem;
+  margin: 2.5rem auto;
+  max-width: 720px;
+  transition: .3s;
+}
+
+.gallery button:disabled {
+  background: #f8bbd0;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.gallery button:not(:disabled):hover {
+  background: #ad1457;
+  transform: scale(1.07);
+}
+
+.gallery input[type="text"] {
+  font-size: 1.08rem;
+  border: 1.5px solid #e91e63;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  margin-right: 0.5rem;
+  transition: border 0.2s;
+}
+.gallery input[type="text"]:focus {
+  border: 1.5px solid #ad1457;
+}
+
+.gallery img, .gallery video {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.gallery img:hover, .gallery video:hover {
+  box-shadow: 0 8px 32px #e91e6340;
+  transform: scale(1.01);
+}
+
+audio {
+  display: block !important;
+}
+
+/* Player fixo e estilizado no canto superior esquerdo */
+.audio-player-fixed {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #e91e6340;
+  padding: 0.7rem 1.2rem 0.7rem 2.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 180px;
+  transition: box-shadow 0.3s, background 0.3s;
+  border: 1.5px solid #e91e63;
+}
+
+.audio-player-fixed:hover {
+  box-shadow: 0 8px 32px #e91e6380;
+  background: #ffe6f0;
+}
+
+.audio-player-fixed audio {
+  width: 260px;
+  max-width: 60vw;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  margin-left: 10px;
+}
+
+/* Ondas sonoras animadas */
+.audio-waves {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 28px;
+  pointer-events: none;
+}
+
+/* Fade out das ondas quando pausado */
+.audio-player-fixed:not(.playing) .audio-waves {
+  opacity: 0.3;
+}
+
+/* Fade in das ondas quando tocando */
+.audio-player-fixed.playing .audio-waves {
+  opacity: 1;
+}
+
+/* Aparência das ondas */
+.audio-waves {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 28px;
+  pointer-events: none;
+}
+
+.audio-wave {
+  width: 4px;
+  height: 60%;
+  margin: 0 1px;
+  background: #e91e63;
+  border-radius: 8px;
+  opacity: 0.7;
+  animation: waveAnim 1s infinite;
+  animation-play-state: paused;
+  transition: height 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+  display: block;
+}
+.audio-wave.wave2 { animation-delay: 0.2s; }
+.audio-wave.wave3 { animation-delay: 0.4s; }
+.audio-wave.wave4 { animation-delay: 0.6s; }
+
+/* Quando tocando, anima as ondas normalmente */
+.audio-player-fixed.playing .audio-wave {
+  animation-play-state: running;
+  /* altura animada pelo keyframes */
+}
+
+/* Quando pausado, todas as ondas encolhem suavemente */
+.audio-player-fixed:not(.playing) .audio-wave {
+  animation-play-state: paused;
+  height: 8px !important; /* linha baixa animada */
+}
+
+@keyframes waveAnim {
+  0%   { height: 60%; }
+  20%  { height: 100%; }
+  40%  { height: 40%; }
+  60%  { height: 80%; }
+  80%  { height: 50%; }
+  100% { height: 60%; }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #ffe6f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #e91e63;
+  border-radius: 8px;
+}
+
+/* Seleção de texto */
+::selection {
+  background: #e91e63;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .poem, .verse, .gallery {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  header h1 { font-size: 1.5rem; }
+  .game { padding: 1rem 0.5rem; }
+  .audio-player-fixed {
+    top: 10px;
+    left: 5px;
+    min-width: 120px;
+    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+  }
+  .audio-waves {
+    left: 4px;
+    height: 22px;
+    width: 18px;
+  }
+  .audio-wave {
+    width: 3px;
+  }
+}

@@ -1,0 +1,6 @@
+document.getElementById('verse').innerHTML = `
+  <div class="verse">
+    <h3>1 Coríntios 13:4</h3>
+    <p>O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha.</p>
+  </div>
+`;
